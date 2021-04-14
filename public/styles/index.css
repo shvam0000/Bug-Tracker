@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.color {
+    color: rgb(47,95,230);
+}
+
+/* Navbar Style */
+
+.navbar {
+    background-color: rgb(105, 105, 231);
+    color: black;
+}
+
+.navbar-brand {
+    color: black;
+    margin: 0 20px;
+}
+
+.navbar-toggle-icon {
+    color: tomato;
+    background-color: tomato;
+}
+
+.nav-item {
+    /* padding: 0 20px; */
+    margin: 0 10px;
+}
+
+.login-item {
+    padding-left: 800px;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    width: fit-content;
+}
+
+/* Navbar style ends */
+
+#about img{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 5%;
+    animation: about-animation 600ms ease-in;
+}
+
+@keyframes about-animation {
+    0% {
+        transform: scale(0);
+    }   
+
+    90%{
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about {
+    margin: 2% auto;
+}
+
+.about-heading {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about-heading {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.my-col {
+    padding: 2rem;
+}
+
+.my-container h1{
+    width: 10%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.my-col img{
+    width: 95%;
+    margin: auto;
+    /* border-radius: 50%; */
+}
+
+.team-heading {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.team {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.contact {
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.form-heading {
+    text-align: center;
+    width: 100%;
+    margin: 5% auto;
+}
+
+.form {
+    box-shadow: 0 2px 10px rgb(0,0,2);
+    width: 40%;
+    margin: 2% auto;
+    padding: 3%;
+}
+
+@media only screen and (max-width:1000px){
+    .form {
+        min-width: 50% !important;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .form {
+        min-width: 70% !important;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .form {
+        min-width: 70% !important;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .form {
+        min-width: 70% !important;
+    }
+}
+
+.form-controller input {
+    width: 100%;
+    outline: 0;
+    border: rgb(161, 158, 158) 2px solid;
+    border-radius: 4px;
+}
+
+.form-controller input:focus {
+    border: solid 2px rgb(102, 99, 99);
+    border-radius: 4px;
+}
+
+.form-controller.success input {
+    border-color: var(--success-color);
+}
+
+.form-controller.error input {
+    border-color: var(--error-color);
+}
+
+.form-controller small{
+    display: block;
+    margin-bottom: 15px;
+    color: var(--error-color);
+    visibility: hidden;
+}
+
+.form-controller.error small{
+    visibility: visible;
+}
+
+.form-controller label{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(49, 85, 247);
+    color: white;
+    padding: 2%;
+    font-size: 1.5rem;
+}
+
+button:focus{
+    border: none;
+    outline: 0;
+}
+
+/* Footer Styles */
+
+.footer p {
+    width: 30%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer{
+    padding: 2.5rem;
+    margin-top: 3%;
+    background-color: rgb(49, 85, 247);
+    padding-bottom: 50px;
+    color: white;
+}
+
+/* Footer Style ends */

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.color {
+    color: rgb(47,95,230);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(105, 105, 231);
+    color: black;
+}
+
+.navbar-brand {
+    color: black;
+    margin: 0 20px;
+}
+
+.navbar-toggle-icon {
+    color: tomato;
+    background-color: tomato;
+}
+
+.nav-item {
+    /* padding: 0 20px; */
+    margin: 0 10px;
+}
+
+.login-item {
+    padding-left: 800px;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    width: fit-content;
+}
+
+/*Navbar ends*/ 
+
+
+/* Form Starts */
+
+.form-container {
+    width: 30%;
+    margin-top: 3%;
+}
+
+.container {
+    width: 10;
+    box-shadow: 0 1px 10px rgb(0,0,2);
+    padding: 3% 5%;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.form h2 {
+    text-align: center;
+    margin: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.form-controller {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-controller label {
+    display: block;
+    color: #0a043c;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.form-controller input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f0f0f0;
+    margin-bottom: 5px;
+}
+
+.form-controller input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-controller p {
+    text-align: center;
+}
+
+.form button {
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    color: white;
+    border: none;
+    background-color: rgb(16, 129, 235);
+    border-radius: 4px;
+}
+
+.form button:hover {
+    background-color: rgb(57, 142, 221);
+    
+}
+
+.form button:focus {
+    border: none;
+    outline-color: rgb(57, 142, 221);
+    background-color: rgb(57, 142, 221);
+}
+
+/* Footer Styles */
+
+.footer p {
+    width: 30%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer{
+    padding: 2.5rem;
+    margin-top: 3%;
+    background-color: rgb(49, 85, 247);
+    padding-bottom: 50px;
+    color: white;
+}
+
+/* Footer Style ends */

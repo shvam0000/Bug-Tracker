@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/styles/index.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bug Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#about-2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Conact Us</a>
+                    </li>
+                    <li class="nav-item login-item">
+                        <a href="./views/login.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg> Login/Signup</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+    <!-- End of navbar -->
+
+    <!-- Main illustration -->
+    <div class="containter" id="about">
+        <img src="../assets/undraw_bug_fixing_oc7a.svg" alt="Big Tracker">
+    </div>
+    <!-- End of Main illustration -->
+
+    <!-- About -->
+
+    <div class="container about" id="about-2">
+        <h2 class="about-heading" id="about-heading"><span class="color">A</span>bout</h2>
+
+        <div class="row my-row">
+            <div class="col-xs-12 col-sm-12 col-md-8 my-col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde id eum, delectus nobis
+                    aspernatur cupiditate quis ullam. Aliquid, velit? Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Commodi, blanditiis!</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 my-col">
+                <img src="../assets/undraw_bug_fixing_oc7a.svg" alt="Coding">
+            </div>
+        </div>
+    </div>
+
+    <!-- End of about -->
+
+    <!-- Team -->
+    <div class="container team" id="team">
+        <h2 class="team-heading"><span class="color">T</span>eam</h2>
+        <div class="row my-row">
+            <div class="col">
+                <!-- Cards -->
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/undraw_bug_fixing_oc7a.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text name"><span class="color">R</span>atanshi <span class="color">P</span>uri
+                        </p>
+                        <p class="card-text designation">Project Lead</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/undraw_bug_fixing_oc7a.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text name"><span class="color">P</span>aras <span class="color">R</span>awat</p>
+                        <p class="card-text designation">Tester and Finance Head</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/undraw_bug_fixing_oc7a.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text name"><span class="color">S</span>hivam <span class="color">S</span>hekhar
+                        </p>
+                        <p class="card-text designation">Technical Head</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Team -->
+
+    <div class="container contact" id="contact">
+        <h2 class="form-heading"><span class="color">L</span>et's Connect</h2>
+        <form id="form" class="form" name="contact" method="POST">
+            <div class="form-controller">
+                <label class="form-label" for="name" id="form-label-name"><span class="color">N</span>ame</label>
+                <input class="form-input" type="text" id="name" placeholder="Enter Name">
+                <small>Error Message</small>
+            </div>
+            <div class="form-controller">
+                <label class="form-label" for="email" id="form-label-email"><span class="color">E</span>mail</label>
+                <input class="form-input" type="text" id="email" placeholder="Enter Email">
+                <small>Error Message</small>
+            </div>
+            <div class="form-controller">
+                <label class="form-label" for="message" id="form-label-message"><span class="color">Y</span>our Message</label>
+                <!-- <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter Your Message"></textarea> -->
+                <input class="form-input" type="text" id="message" placeholder="Enter Your Message">
+                <small>Error Message</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <!-- <div class="infoResults"></div> -->
+
+    <!-- End of Form -->
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <p>Copyright &copy; Team Broski</p>
+        <p>Code can be viewed at - <a href="www.github.com"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg></a></p>
+    </div>
+
+    <!-- End of footer -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script src="../public/scripts/firebaseFormStorage.js"></script>
+</body>
+
+</html>
