@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,12 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
+
 <body>
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Bug Tracker</a>
+            <a class="navbar-brand" href="/">Bug Tracker</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,17 +24,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#about-2">About</a>
+                        <a class="nav-link" aria-current="page" href="/#about-2">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#team">Team</a>
+                        <a class="nav-link" href="/#team">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Conact Us</a>
+                        <a class="nav-link" href="/#contact">Conact Us</a>
                     </li>
                     <li class="nav-item login-item">
-                        <a href="./views/login.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <a href="/login" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                                 <path
                                     d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                             </svg> Login/Signup</a>
@@ -44,16 +46,97 @@
 
     <!-- hello user heading -->
     <div class="container hello-heading">
-        <h1 class="helloheading">Hello {user}</h1>
+        <h1 class="helloheading">Hello, welcome to Bug Tracker</h1>
     </div>
     <!-- heading ends -->
 
     <!-- add bug button -->
-    <div class="container">
-        <button class="btn addbug-btn">+ Add a Bug</button>
-    </div>
+    <form action="/logout" method="POST">
+        <div class="container">
+            <button type="submit" class="btn addbug-btn">Logout</button>
+        </div>
+    </form>
     <!-- button ends -->
 
-    
+    <div class="container" style="text-align: center;">
+        <form action="/add" id="userForm" method="POST" style="display: block;">
+            <label style="display: block;" for="name" id="form-label">Name of the project</label>
+            <input type="text" placeholder="Enter Name" id="form-input" name="item[name]" required>
+            <label style="display: block;" for="age" id="form-label">Serial number</label>
+            <input type="number" placeholder="Enter Age" id="form-input" name="item[age]" required>
+            <label style="display: block;" for="blood-group" id="form-label">Bug</label>
+            <input type="text" placeholder="Enter Blood Group" name="item[blood]" required>
+            <label style="display: block;" for="conact-number" id="form-label">Contact Number</label>
+            <input type="number" name="item[contact]" placeholder="Enter Contact Number" id="form-input" required>
+            <label style="display: block;" for="address" id="form-label">Name of developer</label>
+            <input type="text" id="form-input" placeholder="Enter Address" name="item[address]" required>
+            <label style="display: block;" for="date" id="form-label">Date of Bug</label>
+            <input type="date" id="form-input" placeholder="Enter the date of Recovery" name="item[date]" required>
+            <br>
+            <button type="submit" class="btn btn-lg" style="margin-top: 0.5rem; background-color: lightblue;">Submit</button></a>
+        </form>
+    </div>
+
+
+
+    <div class="donor-data-heading">
+        <h2 style="text-align: center;">
+            Bugs
+        </h2>
+    </div>
+  
+    <!-- <div class="donor-data">
+      <table class = "item imp">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Contact Number</th>
+            <th>Address</th>
+            <th>Date of Recovery</th>
+          </tr>
+          <% items.forEach(function(item){ %>
+          <tr>
+              <td>
+              <% if (item.name) { %>
+                  <span><h1 style="color: greenyellow;"><b><%= item.name %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.age) { %>
+                  <span><h1 style="color: greenyellow;"><b><%= item.age %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.blood) { %>
+                  <span><h1 style="color: greenyellow;"><b><%= item.blood %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.contact) { %>
+                  <span><h1 style="color: greenyellow;"><b><%= item.contact %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.address) { %>
+                  <span><h1 style="color: greenyellow;"><b><%= item.address %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.date) { %>
+                  <span><h1 style="color: greenyellow;"><b><%= item.date %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.itemfile) { %>
+                  <span><img style="width: 200px;" src="./files/<%= item.itemfile %>"/></span>
+              <% } %>
+              </td>
+          </tr>
+           <% }) %>
+        </table>
+       -->
+
 </body>
+
 </html>
