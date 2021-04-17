@@ -104,6 +104,11 @@ app.post('/logout', (req, res, next) => {
     res.redirect('/login');
 })
 
+app.get('*', (req, res, next) => {
+    res.status(404).render('404');
+})
+
+
 app.listen(process.env.PORT || 3000, () => {
     console.log('listening on 3000');
 })

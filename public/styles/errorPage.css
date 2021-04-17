@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.color {
+    color: rgb(47,95,230);
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(105, 105, 231);
+    color: black;
+}
+
+.navbar-brand {
+    color: black;
+    margin: 0 20px;
+}
+
+.navbar-toggle-icon {
+    color: tomato;
+    background-color: tomato;
+}
+
+.nav-item {
+    /* padding: 0 20px; */
+    margin: 0 10px;
+}
+
+.login-item {
+    padding-left: 800px;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+    width: fit-content;
+}
+
+/*Navbar ends*/ 
+
+
+.error-image {
+    justify-content: center;
+    text-align: center;
+}
