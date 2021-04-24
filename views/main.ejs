@@ -52,7 +52,7 @@
 
     <!-- add bug button -->
     <form action="/logout" method="POST">
-        <div class="container">
+        <div class="container logout-button">
             <button type="submit" class="btn addbug-btn">Logout</button>
         </div>
     </form>
@@ -60,20 +60,20 @@
 
     <div class="container" style="text-align: center;">
         <form action="/add" id="userForm" method="POST" style="display: block;">
-            <label style="display: block;" for="name" id="form-label">Name of the project</label>
+            <label style="display: block;" for="name" id="form-label">Project</label>
             <input type="text" placeholder="Enter Name" id="form-input" name="item[name]" required>
-            <label style="display: block;" for="age" id="form-label">Serial number</label>
+            <label style="display: block;" for="age" id="form-label">Sr. No.</label>
             <input type="number" placeholder="Enter Age" id="form-input" name="item[age]" required>
             <label style="display: block;" for="blood-group" id="form-label">Bug</label>
             <input type="text" placeholder="Enter Blood Group" name="item[blood]" required>
             <label style="display: block;" for="conact-number" id="form-label">Contact Number</label>
             <input type="number" name="item[contact]" placeholder="Enter Contact Number" id="form-input" required>
-            <label style="display: block;" for="address" id="form-label">Name of developer</label>
-            <input type="text" id="form-input" placeholder="Enter Address" name="item[address]" required>
+            <label style="display: block;" for="address" id="form-label">Developer</label>
+            <input type="text" id="form-input" placeholder="Name of the Developer" name="item[address]" required>
             <label style="display: block;" for="date" id="form-label">Date of Bug</label>
             <input type="date" id="form-input" placeholder="Enter the date of Recovery" name="item[date]" required>
             <br>
-            <button type="submit" class="btn btn-lg" style="margin-top: 0.5rem; background-color: lightblue;">Submit</button></a>
+            <button type="submit" class="btn btn-lg submit-button">Submit</button></a>
         </form>
     </div>
 
@@ -85,15 +85,15 @@
         </h2>
     </div>
   
-    <div class="donor-data">
+    <div class="donor-data container">
       <table class = "item imp">
           <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Blood Group</th>
+            <th>Project Name</th>
+            <th>Sr. No.</th>
+            <th>Bug</th>
             <th>Contact Number</th>
-            <th>Address</th>
-            <th>Date of Recovery</th>
+            <th>Developer</th>
+            <th>Date</th>
           </tr>
           <% items.forEach(function(item){ %>
           <tr>
@@ -125,11 +125,6 @@
               <td>
               <% if (item.date) { %>
                   <span><h1 style="color: greenyellow;"><b><%= item.date %></b></h1></span>
-              <% } %>
-              </td>
-              <td>
-              <% if (item.itemfile) { %>
-                  <span><img style="width: 200px;" src="./files/<%= item.itemfile %>"/></span>
               <% } %>
               </td>
           </tr>
