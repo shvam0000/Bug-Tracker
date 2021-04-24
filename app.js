@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const request = require('request');
 const multer = require('multer');
+const bcrypt = require('bcryptjs');
 
 const app = express();
 
@@ -23,7 +23,7 @@ const upload = multer({
     storage: storage
 })
 
-const uri = 'mongodb+srv://Hack:test@database.y1m2l.mongodb.net/<dbname>?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://admin:admin@node-rest-shop.5kcqy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 client.connect(err => {
     db = client.db('test');
@@ -64,11 +64,11 @@ app.get('/main', (req, res, next) => {
 app.post('/signup', (req, res, next) => {
     db.collection('signup').save(req.body, (err, result) => {
         if (err) {
-            res.redirect('/signup');
+            res.status(302).redirect('/signup');
             console.log(err);
         }
         console.log('saved to database');
-        res.redirect('/login');    
+        res.status(302).redirect('/login');    
     })
 })
 
@@ -83,7 +83,7 @@ app.post('/logindata', (req, res, next) => {
         } else {
             user = req.body.username;
             console.log((req.body.username + ' was logged in successfully'));
-            res.redirect('/main')
+            res.status(302).redirect('/main')
             return res.send()
         }
     })
@@ -91,10 +91,12 @@ app.post('/logindata', (req, res, next) => {
 
 app.post('/add', (req, res, next) => {
     db.collection('items').insertOne(req.body.item, (err, result) => {
-        if(err) {res.json(err)}
-        else {
-            console.log(result);
-            res.redirect('/main')
+        if (err) {
+            console.log(err);
+            res.json(err);
+        } else {
+          console.log(result);
+          res.status(302).redirect('/main');
         }
     })
 })
@@ -107,7 +109,6 @@ app.post('/logout', (req, res, next) => {
 app.get('*', (req, res, next) => {
     res.status(404).render('404');
 })
-
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('listening on 3000');
