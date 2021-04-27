@@ -4,10 +4,24 @@
 
 > Deployed at https://bugtracker-sepm.herokuapp.com/
 
+## Technology Stack and Dependencies
+
+- **Front-end**
+  - HTML
+  - CSS
+  - BootStrap
+  - Firebase
+
+- **Back-end**
+  - Node.js
+  - Express.js
+  - MongoDB
+
 <h1 align="center"> Contributors </h1>
 <table align="center">
 <tr align="center">
 <td>
+
 <strong>Shivam Shekhar</strong>
 <p align="center">
 <img src = "https://avatars0.githubusercontent.com/u/60486289?s=460&v=4"  height="120" alt="Shivam Shekhar">
