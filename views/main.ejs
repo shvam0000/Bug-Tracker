@@ -67,15 +67,17 @@
             <label style="display: block;" for="name" id="form-label">Project</label>
             <input type="text" placeholder="Enter Project Name" id="form-input" name="item[name]" required>
             <label style="display: block;" for="age" id="form-label">Sr. No.</label>
-            <input type="number" placeholder="Enter Sr. No." id="form-input" name="item[age]" required>
+            <input type="number" placeholder="Enter Sr. No." id="form-input" name="item[number]" required>
             <label style="display: block;" for="blood-group" id="form-label">Bug</label>
-            <input type="text" placeholder="Enter Bug" name="item[blood]" required>
+            <input type="text" placeholder="Enter Bug" name="item[bug]" required>
             <label style="display: block;" for="conact-number" id="form-label">Contact Number</label>
-            <input type="number" name="item[contact]" placeholder="Enter Contact Number" id="form-input" required>
+            <input type="number" name="item[cnum]" placeholder="Enter Contact Number" id="form-input" required>
             <label style="display: block;" for="address" id="form-label">Developer</label>
-            <input type="text" id="form-input" placeholder="Name of the Developer" name="item[address]" required>
+            <input type="text" id="form-input" placeholder="Name of the Developer" name="item[dev]" required>
             <label style="display: block;" for="date" id="form-label">Date of Bug</label>
             <input type="date" id="form-input" placeholder="Enter the date of Bug" name="item[date]" required>
+            <label style="display: block;" for="status" id="form-label">Status of Bug</label>
+            <input type="text" id="form-input" placeholder="Enter the status of Bug" name="item[status]" required>
             <br>
             <button type="submit" class="btn btn-lg submit-button">Submit</button></a>
         </form>
@@ -85,7 +87,7 @@
 
     <div class="donor-data-heading">
         <h2 style="text-align: center;">
-            Bugs
+            Records
         </h2>
     </div>
   
@@ -98,37 +100,43 @@
             <th>Contact Number</th>
             <th>Developer</th>
             <th>Date</th>
+            <th>Status</th>
           </tr>
           <% items.forEach(function(item){ %>
           <tr>
               <td>
               <% if (item.name) { %>
-                  <span><h1 style="color: greenyellow;"><b><%= item.name %></b></h1></span>
+                  <span><h1 style="color: white;"><b><%= item.name %></b></h1></span>
               <% } %>
               </td>
               <td>
-              <% if (item.age) { %>
-                  <span><h1 style="color: greenyellow;"><b><%= item.age %></b></h1></span>
+              <% if (item.number) { %>
+                  <span><h1 style="color: white;"><b><%= item.number %></b></h1></span>
               <% } %>
               </td>
               <td>
-              <% if (item.blood) { %>
-                  <span><h1 style="color: greenyellow;"><b><%= item.blood %></b></h1></span>
+              <% if (item.bug) { %>
+                  <span><h1 style="color: white;"><b><%= item.bug %></b></h1></span>
               <% } %>
               </td>
               <td>
-              <% if (item.contact) { %>
-                  <span><h1 style="color: greenyellow;"><b><%= item.contact %></b></h1></span>
+              <% if (item.cnum) { %>
+                  <span><h1 style="color: white;"><b><%= item.cnum %></b></h1></span>
               <% } %>
               </td>
               <td>
-              <% if (item.address) { %>
-                  <span><h1 style="color: greenyellow;"><b><%= item.address %></b></h1></span>
+              <% if (item.dev) { %>
+                  <span><h1 style="color: white;"><b><%= item.dev %></b></h1></span>
               <% } %>
               </td>
               <td>
               <% if (item.date) { %>
-                  <span><h1 style="color: greenyellow;"><b><%= item.date %></b></h1></span>
+                  <span><h1 style="color: white;"><b><%= item.date %></b></h1></span>
+              <% } %>
+              </td>
+              <td>
+              <% if (item.status) { %>
+                  <span><h1 style="color: white;"><b><%= item.status %></b></h1></span>
               <% } %>
               </td>
           </tr>
