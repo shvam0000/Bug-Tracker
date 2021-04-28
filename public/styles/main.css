@@ -24,6 +24,14 @@ body {
     color: black;
 }
 
+.title:hover{
+    color: white;
+    border: 1px white solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
 .navbar-brand {
     color: black;
     margin: 0 20px;
@@ -76,6 +84,7 @@ body {
     background-color: rgb(10, 182, 240);
     color: black;
 }
+
 
 .logout-button {
     text-align: center;

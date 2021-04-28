@@ -29,6 +29,14 @@ body {
     margin: 0 20px;
 }
 
+.title:hover{
+    color: white;
+    border: 1px white solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
 .navbar-toggle-icon {
     color: tomato;
     background-color: tomato;

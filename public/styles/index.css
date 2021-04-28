@@ -48,6 +48,14 @@ body {
     color: black;
 }
 
+.title:hover{
+    color: white;
+    border: 1px white solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
 .nav-link:hover {
     border: 1px solid white;
     border-top: none;

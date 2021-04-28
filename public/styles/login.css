@@ -14,6 +14,14 @@ body {
     font-size: 20px;
 }
 
+.title:hover{
+    color: white;
+    border: 1px white solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
 .color {
     color: rgb(47,95,230);
 }
