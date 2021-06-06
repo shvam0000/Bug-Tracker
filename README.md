@@ -1,4 +1,4 @@
-# Bug Tracker
+# Defect Tracker
 
 ### Project for SEPM by Team Broski
 
@@ -11,6 +11,7 @@
   - CSS
   - BootStrap
   - Firebase
+  - EJS
 
 - **Back-end**
   - Node.js
