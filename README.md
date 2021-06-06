@@ -2,7 +2,7 @@
 
 ### Project for SEPM by Team Broski
 
-> Deployed at https://bugtracker-sepm.herokuapp.com/
+> Deployed at https://defecttracker-sepm.herokuapp.com/
 
 ## Technology Stack and Dependencies
 
