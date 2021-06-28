@@ -2,11 +2,10 @@
 
 ### Project for SEPM by Team Broski
 
-> Deployed at https://defecttracker-sepm.herokuapp.com/
-
 ## Technology Stack and Dependencies
 
 - **Front-end**
+
   - HTML
   - CSS
   - BootStrap
@@ -24,6 +23,7 @@
 <td>
 
 <strong>Shivam Shekhar</strong>
+
 <p align="center">
 <img src = "https://avatars0.githubusercontent.com/u/60486289?s=460&v=4"  height="120" alt="Shivam Shekhar">
 </p>
