@@ -33,16 +33,15 @@ const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-client.connect((err) => {
+client.connect(err => {
   db = client.db('test');
   console.log('connected');
 });
 
 //to import templating engine -> EJS
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 app.set("views", "./views");
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static('public'));
 
 //middleware
@@ -91,24 +90,21 @@ app.post('/signup', (req, res, next) => {
 
 //this triggers when you submit the login form
 app.post('/logindata', (req, res, next) => {
-  db.collection('signup').findOne(
-    { username: req.body.username, password: req.body.password },
-    (err, result) => {
-      if (err) {
-        return console.log(err);
-      }
-      if (!result) {
-        res.render('login', { x: 'Username or password fault' });
-        res.end();
-        return console.log('Username or password fault');
-      } else {
-        user = req.body.username;
-        console.log(req.body.username + ' was logged in successfully');
-        res.status(302).redirect('/main');
-        return res.send();
-      }
+  db.collection('signup').findOne({ username: req.body.username, password: req.body.password }, (err, result) => {
+    if (err) {
+      return console.log(err);
     }
-  );
+    if (!result) {
+      res.render('login', { x: 'Username or password fault' });
+      res.end();
+      return console.log('Username or password fault');
+    } else {
+      user = req.body.username;
+      console.log(req.body.username + ' was logged in successfully');
+      res.status(302).redirect('/main');
+      return res.send();
+    }
+  });
 });
 
 //to store the data in DB
